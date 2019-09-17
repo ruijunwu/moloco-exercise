@@ -15,7 +15,7 @@ SELECT a.user_id, a.site_id, COUNT(b.site_id) AS numer_of_visits
 FROM moloco a
 INNER JOIN moloco b
 ON a.user_id = b.user_id AND a.site_id = b.site_id AND a.ts = b.ts
-WHERE b.ts Between '2019-02-03 00:00:00' and '2019-02-04 23:59:59'
+WHERE b.ts Between '2019-02-03 00:00:00' AND '2019-02-04 23:59:59'
 GROUP BY a.user_id, a.site_id
 HAVING COUNT(b.site_id) > 10;
 ```

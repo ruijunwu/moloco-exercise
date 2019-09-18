@@ -1,4 +1,4 @@
-Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, 
+### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, 
 
 ```matlab
 data = csvread('regress.csv',1,0);

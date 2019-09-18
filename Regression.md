@@ -1,4 +1,4 @@
-### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, 
+### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. And the final result should only contain variables: A B  A^2*B.
 
 ```matlab
 data = csvread('regress.csv',1,0);

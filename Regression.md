@@ -1,4 +1,6 @@
-### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. And the best linear model should only contain variables: A B  A^2*B.
+### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. 
+## And the best linear model should be: <br>
+**y = -8.2651 + 11.3497 * A - 8.9645 * B - 67.1831 * A^2*B.**
 
 ```matlab
 data = csvread('regress.csv',1,0);
@@ -48,9 +50,12 @@ plot(y,predict,'b.','MarkerSize',15);
 xlabel('true value');
 ylabel('predicted value using lasso regression');
 title('true value vs. predicted value');
-
+```
 -------------------------------------------------------------------------------------------------------------------
-%featureNormalize function to normalize the training data
+
+featureNormalize function to normalize the training data:
+
+```matlab
 function [X_norm, mu, sigma] = featureNormalize(X)
 
 X_norm = X;
@@ -65,10 +70,11 @@ for i = 1:size(X,2)
 end
 
 end
-
+```
 -------------------------------------------------------------------------------------------------------------------
-% gradientDescentMulti function to use gradient descent method to compute the theta(parameters) which minimize the cost function
-
+gradientDescentMulti function to use gradient descent method to compute the theta(parameters) 
+which minimize the cost function:
+```matlab
 function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters, lambda)
 
 m = length(y); % number of training examples
@@ -85,9 +91,12 @@ for iter = 1:num_iters
     J_history(iter) = computeCostMulti(X, y, theta, lambda);
 
 end
-
+```
 -------------------------------------------------------------------------------------------------------------------
-% computeCostMulti is to compute every iterarion's cost function
+computeCostMulti is to compute every iterarion's cost function:
+
+```matlab
+
 function J = computeCostMulti(X, y, theta, lambda)
 
 m = length(y); % number of training examples

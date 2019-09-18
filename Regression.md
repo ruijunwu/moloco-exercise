@@ -53,3 +53,4 @@ title('true value vs. predicted value');
 
 
 ```
+![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "Logo Title Text 1")

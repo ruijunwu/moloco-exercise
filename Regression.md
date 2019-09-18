@@ -1,4 +1,4 @@
-## Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. 
+## Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters would be decreased to very small numbers. 
 ## And the best linear model should be: <br>
 **y = -8.2651 + 11.3497 * A - 8.9645 * B - 67.1831 * A^2*B.**
 
@@ -111,12 +111,11 @@ J = 1/(2*m) * sum(error .^2) + lambda/(2*m) * sum(abs(theta(2:n)));
 end
 ```
 
-##
-```
-This is my regression model result:
-```
-![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")
 
-Plot of convergence of the cost function:
+> This is my regression model result:
 
-![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/costfuction.jpg "costfunction")
+> ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")
+
+> Plot of convergence of the cost function:
+
+> ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/costfuction.jpg "costfunction")

@@ -115,10 +115,7 @@ end
 ```
 
 
-> This is my regression model result:
-
-> ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")
-
-> Plot of convergence of the cost function:
-
+> This is my regression model result:<br>
+> ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")<br>
+> Plot of convergence of the cost function:<br>
 > ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/costfuction.jpg "costfunction")

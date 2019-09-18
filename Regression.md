@@ -1,6 +1,9 @@
 ## Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters would be decreased to very small numbers. 
 ## And the best linear model should be: <br>
-**y = -8.2651 + 11.3497 * A - 8.9645 * B - 67.1831 * A^2*B.**
+
+> **y = -8.2651 + 11.3497 * A - 8.9645 * B - 67.1831 * A^2*B.**
+
+Using this model, the R squared is equal to 1.00.
 
 ```matlab
 data = csvread('regress.csv',1,0);

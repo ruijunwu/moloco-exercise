@@ -47,7 +47,7 @@ ylabel('Cost J');
 
 
 error = y - X * theta;
-R2 = 1-sum(error.^2)/sum(y.^2);% use r^2 to test if our regression model is good enough or not
+R2 = 1-sum(error.^2)/sum((y-mean(y)).^2);% use r^2 to test if our regression model is good enough or not
 
 plot(y,predict,'b.','MarkerSize',15);
 xlabel('true value');

@@ -1,4 +1,4 @@
-## I use the lasso regression to fit the data in column C in terms of colomn A and B 
+Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, 
 
 ```matlab
 data = csvread('regress.csv',1,0);
@@ -50,7 +50,7 @@ ylabel('predicted value using lasso regression');
 title('true value vs. predicted value');
 
 -------------------------------------------------------------------------------------------------------------------
-%featureNormalize function
+%featureNormalize function to normalize the training data
 function [X_norm, mu, sigma] = featureNormalize(X)
 
 X_norm = X;
@@ -86,10 +86,28 @@ for iter = 1:num_iters
 
 end
 
+-------------------------------------------------------------------------------------------------------------------
+% computeCostMulti is to compute every iterarion's cost function
+function J = computeCostMulti(X, y, theta, lambda)
+
+m = length(y); % number of training examples
+n = size(X,2);
+
+J = 0;
+
+predictions = X * theta;
+error = y - predictions;
+J = 1/(2*m) * sum(error .^2) + lambda/(2*m) * sum(abs(theta(2:n)));
+
+end
 ```
 
 ##
 ```
-this is my regression model result:
+This is my regression model result:
 ```
 ![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")
+
+Plot of convergence of the cost function:
+
+![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/costfuction.jpg "costfunction")

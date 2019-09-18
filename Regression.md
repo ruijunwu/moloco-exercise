@@ -1,4 +1,4 @@
-**
+## I use the lasso regression to fit the data in column C in terms of colomn A and B 
 
 ```matlab
 data = csvread('regress.csv',1,0);
@@ -51,6 +51,10 @@ title('true value vs. predicted value');
 
 
 
-
 ```
-![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "Logo Title Text 1")
+
+##
+```
+this is my regression model result:
+```
+![alt text](https://github.com/ruijunwu/moloco-exercise/blob/master/lasso.jpg "result")

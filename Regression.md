@@ -1,4 +1,4 @@
-### Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. 
+## Used the lasso regression to fit the data in column C in terms of colomn A, B, A^2, AB, B^2, A^3, A^2B, B^3. Some unimportant variables' parameters will be decreased to very small numbers. 
 ## And the best linear model should be: <br>
 **y = -8.2651 + 11.3497 * A - 8.9645 * B - 67.1831 * A^2*B.**
 
@@ -53,7 +53,7 @@ title('true value vs. predicted value');
 ```
 -------------------------------------------------------------------------------------------------------------------
 
-featureNormalize function to normalize the training data:
+featureNormalize function is to normalize the training data:
 
 ```matlab
 function [X_norm, mu, sigma] = featureNormalize(X)
@@ -72,7 +72,7 @@ end
 end
 ```
 -------------------------------------------------------------------------------------------------------------------
-gradientDescentMulti function to use gradient descent method to compute the theta(parameters) 
+gradientDescentMulti function is to use gradient descent method to compute the theta(parameters) 
 which minimize the cost function:
 ```matlab
 function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters, lambda)
